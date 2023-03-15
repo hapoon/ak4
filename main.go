@@ -15,6 +15,7 @@ const (
 
 func main() {
 	app := &cli.App{
+		Version:     version,
 		Description: "A cli appliation for AKASHI",
 		Flags: []cli.Flag{
 			&cli.StringFlag{Name: "profile", Usage: "profile name"},
