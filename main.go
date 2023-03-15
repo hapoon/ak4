@@ -10,7 +10,7 @@ import (
 
 const (
 	name    = "ak4"
-	version = "0.1.0"
+	version = "0.2.0"
 )
 
 func main() {
@@ -22,12 +22,6 @@ func main() {
 		},
 		Commands: []*cli.Command{
 			{
-				Name:      "stamp",
-				Usage:     "Process employee imprinting",
-				UsageText: "Process employee imprinting",
-				Action:    action.ActStamp,
-			},
-			{
 				Name:      "init",
 				Usage:     "Initialize setting",
 				UsageText: "Initialize setting",
@@ -36,6 +30,18 @@ func main() {
 					&cli.StringFlag{Name: "token", Usage: "トークン"},
 				},
 				Action: action.ActInit,
+			},
+			{
+				Name:      "stamp",
+				Usage:     "Process employee imprinting",
+				UsageText: "Process employee imprinting",
+				Action:    action.ActStamp,
+			},
+			{
+				Name:      "token",
+				Usage:     "Reissue token",
+				UsageText: "Reissue token",
+				Action:    action.ActToken,
 			},
 		},
 	}
