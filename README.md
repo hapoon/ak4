@@ -26,6 +26,12 @@ ak4 init --login_company_code [企業ID] --token [アクセストークン]
 ak4 stamp
 ```
 
+トークン再発行
+
+```
+ak4 token
+```
+
 ## License
 
 [MIT](/LICENSE)
